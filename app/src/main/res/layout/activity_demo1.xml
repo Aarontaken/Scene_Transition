@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Demo1Activity">
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:src="@mipmap/mm"
+        android:scaleType="centerCrop"
+        android:layout_height="0dp" />
+
+    <RelativeLayout
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingBottom="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:text="@string/title"/>
+        <TextView
+            android:id="@+id/subTitle"
+            android:layout_marginTop="2dp"
+            android:textSize="14sp"
+            android:layout_below="@+id/title"
+            android:text="@string/subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <ScrollView
+            android:id="@+id/desc_container"
+            android:layout_width="match_parent"
+            android:layout_marginTop="4dp"
+            android:layout_below="@id/subTitle"
+            android:scrollbars="none"
+            android:overScrollMode="never"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/desc"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lorem"/>
+        </ScrollView>
+        <ImageView
+            android:id="@+id/transition"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@id/title"
+            android:layout_width="wrap_content"
+            android:src="@drawable/ic_see_detail"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+</LinearLayout>
