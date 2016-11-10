@@ -11,3 +11,4 @@ public class Demo2Activity extends AppCompatActivity {
         setContentView(R.layout.activity_demo2);
     }
 }
+
